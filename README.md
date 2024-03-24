@@ -2,7 +2,7 @@
 Name: [Kirill Zolotuskiy](https://github.com/Kirill-iceland)  
 Group: `Б05-327`  
 
-## Discription
+## Description
 A program that builds a maze to a specified dimension and allows to edit and test it.  
 
 ## Uses
