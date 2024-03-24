@@ -11,3 +11,6 @@ A program that builds a maze to a specified dimension and allows to edit and tes
 - Solve mazes with different algorithms
 - Solve mazes yourself
 - Compete in maze solving (Depending on time)
+
+## UML diagram
+![](uml.png)
