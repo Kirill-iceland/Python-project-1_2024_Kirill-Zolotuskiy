@@ -4,6 +4,7 @@ from Maze import Maze
 from UnionFind import UnionFind
 import random
 
+
 class SpanningTree:
     def get_index(x: int, y: int, width: int) -> int:
         return x * width + y
@@ -28,8 +29,10 @@ class SpanningTree:
         index = -1
         while number_of_connected > 0:
             index += 1
-            cell1 = SpanningTree.get_index(edges[index][0], edges[index][1], width)
-            cell2 = SpanningTree.get_index(edges[index][2], edges[index][3], width)
+            cell1 = SpanningTree.get_index(
+                edges[index][0], edges[index][1], width)
+            cell2 = SpanningTree.get_index(
+                edges[index][2], edges[index][3], width)
             if (union_find.connected(cell1, cell2)):
                 continue
             union_find.union(cell1, cell2)

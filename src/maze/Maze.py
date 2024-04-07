@@ -1,6 +1,7 @@
 from Cell import Cell
 import pygame
 
+
 class Maze:
     grid: list[list[Cell]] = [[]]
     width: int
@@ -25,21 +26,27 @@ class Maze:
     def draw(self, screen: pygame.Surface):
         screen_x, screen_y = screen.get_size()
         length = min(screen_y / (self.height + 2), screen_x / (self.width + 2))
-        pygame.draw.rect(screen, (100, 100, 100), (length, length, length * self.width, length * self.height))
-        pygame.draw.rect(screen, (255, 255, 100), (length, length, length, length))
-        pygame.draw.rect(screen, (100, 255, 100), ((length * self.width), (length * self.height), length, length))
+        pygame.draw.rect(screen, (100, 100, 100), (length,
+                         length, length * self.width, length * self.height))
+        pygame.draw.rect(screen, (255, 255, 100),
+                         (length, length, length, length))
+        pygame.draw.rect(screen, (100, 255, 100), ((
+            length * self.width), (length * self.height), length, length))
         stroke = max(length / 10, 1)
         for i in range(self.height):
             for j in range(self.width):
                 if (self.grid[i][j].left_wall):
-                    pygame.draw.rect(screen, (255, 0, 0), (length + (i * length), length + (j * length), length, stroke))
+                    pygame.draw.rect(
+                        screen, (255, 0, 0), (length + (i * length), length + (j * length), length, stroke))
 
                 if (self.grid[i][j].right_wall):
-                    pygame.draw.rect(screen, (255, 0, 0), (length + (i * length), 2 * length - stroke + (j * length), length, stroke))
+                    pygame.draw.rect(screen, (255, 0, 0), (length + (i * length),
+                                     2 * length - stroke + (j * length), length, stroke))
 
                 if (self.grid[i][j].top_wall):
-                    pygame.draw.rect(screen, (255, 0, 0), (length + (i * length), length + (j * length), stroke, length))
+                    pygame.draw.rect(
+                        screen, (255, 0, 0), (length + (i * length), length + (j * length), stroke, length))
 
                 if (self.grid[i][j].bottom_wall):
-                    pygame.draw.rect(screen, (255, 0, 0), (2 * length - stroke + (i * length), length + (j * length), stroke, length))
-
+                    pygame.draw.rect(screen, (255, 0, 0), (2 * length - stroke +
+                                     (i * length), length + (j * length), stroke, length))

@@ -2,6 +2,7 @@ import sys
 from Maze import Maze
 import random
 
+
 class DFS:
     def DFS(top_x: int, top_y: int, edges: list[list[list[tuple[int, int, int]]]],
             maze: Maze, visited: list[list[bool]]):
