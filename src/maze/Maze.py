@@ -26,6 +26,8 @@ class Maze:
         screen_x, screen_y = screen.get_size()
         length = min(screen_y / (self.height + 2), screen_x / (self.width + 2))
         pygame.draw.rect(screen, (100, 100, 100), (length, length, length * self.width, length * self.height))
+        pygame.draw.rect(screen, (255, 255, 100), (length, length, length, length))
+        pygame.draw.rect(screen, (100, 255, 100), ((length * self.width), (length * self.height), length, length))
         stroke = max(length / 10, 1)
         for i in range(self.height):
             for j in range(self.width):
@@ -40,4 +42,4 @@ class Maze:
 
                 if (self.grid[i][j].bottom_wall):
                     pygame.draw.rect(screen, (255, 0, 0), (2 * length - stroke + (i * length), length + (j * length), stroke, length))
-        return 0
+
