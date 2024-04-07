@@ -26,5 +26,15 @@ class Maze:
         pygame.draw.rect(screen, (100, 100, 100), (10, 10, 10 * self.width, 10 * self.height))
         for i in range(self.height):
             for j in range(self.width):
-                pygame.draw.rect(screen, (255, 0, 0), (10 + (i * 10), 10 + (j * 10), 10, 10))
+                if (self.grid[i][j].left_wall):
+                    pygame.draw.rect(screen, (255, 0, 0), (10 + (i * 10), 10 + (j * 10), 10, 1))
+
+                if (self.grid[i][j].right_wall):
+                    pygame.draw.rect(screen, (255, 0, 0), (10 + (i * 10), 19 + (j * 10), 10, 1))
+
+                if (self.grid[i][j].top_wall):
+                    pygame.draw.rect(screen, (255, 0, 0), (10 + (i * 10), 10 + (j * 10), 1, 10))
+
+                if (self.grid[i][j].bottom_wall):
+                    pygame.draw.rect(screen, (255, 0, 0), (19 + (i * 10), 10 + (j * 10), 1, 10))
         return 0
