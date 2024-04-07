@@ -1,3 +1,4 @@
 .vscode/
 src/algorithms/__pycache__/
 src/maze/__pycache__/
+src/windows/__pycache__/
