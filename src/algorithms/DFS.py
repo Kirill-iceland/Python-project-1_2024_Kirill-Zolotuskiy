@@ -1,3 +1,4 @@
+import sys
 from Maze import Maze
 import random
 
@@ -24,6 +25,7 @@ class DFS:
             DFS.DFS(cell_x, cell_y, edges, maze, visited)
 
     def generate(width: int, height: int) -> Maze:
+        sys.setrecursionlimit(width * height * 10)
         maze = Maze(width, height, 0b1111)
         edges = [[[]]]
         visited = [[]]
