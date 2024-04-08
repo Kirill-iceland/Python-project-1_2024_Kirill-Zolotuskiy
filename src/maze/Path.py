@@ -10,6 +10,15 @@ class Path:
     def append(self, cell_x: int, cell_y: int):
         self.path.append((cell_x, cell_y))
 
+    def draw_last(self, screen: pygame.Surface, pos_x: int, pos_y: int, size_x: int, size_y: int):
+        length = min(size_x / self.maze.height,
+                    size_y / self.maze.width)
+        stroke = max(length / 3, 1)
+        pygame.draw.rect(screen, (100, 100, 255), (pos_x + stroke + (self.path[-1][0] * length), pos_y +
+                stroke + (self.path[-1][1] * length), length - (2 * stroke), length - (2 * stroke)))
+        pygame.draw.rect(screen, (50, 50, 255), (pos_x + stroke + (self.path[-1][0] * length), pos_y +
+                stroke + (self.path[-1][1] * length), length - (2 * stroke), length - (2 * stroke)), int(stroke) // 5)
+
     def draw(self, screen: pygame.Surface, pos_x: int, pos_y: int, size_x: int, size_y: int):
         screen_x, screen_y = screen.get_size()
         length = min(size_x / self.maze.height,
