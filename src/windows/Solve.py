@@ -170,6 +170,11 @@ class Solve:
                             self.solution.path.pop()
                         else:
                             self.solution.append(cell_x, cell_y + 1)
+                    
+                    (cell_x, cell_y) = self.solution.path[-1]
+                    if (cell_y < 0 or cell_y >= self.width or
+                        cell_x < 0 or cell_x >= self.height):
+                        self.solution.path.pop()
 
                 if event.type == pygame.QUIT:
                     running = False
