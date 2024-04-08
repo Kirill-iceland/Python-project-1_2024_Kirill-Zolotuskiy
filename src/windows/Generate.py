@@ -114,6 +114,12 @@ class Generate:
                         self.maze = DFS.generate(self.width, self.height)
                     else:
                         self.maze = SpanningTree.generate(self.width, self.height)
+                    if self.solve:
+                        if self.solver_type == 'BFS':
+                            self.solution = BFS.solve(self.maze)
+                        else:
+                            self.solution = AStar.solve(self.maze)
+
 
                 if self.solve_maze.draw(screen):
                     if self.solve:
