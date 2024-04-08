@@ -3,11 +3,8 @@ import pygame
 
 
 class Maze:
-    grid: list[list[Cell]] = [[]]
-    width: int
-    height: int
-
     def __init__(self, width: int, height: int):
+        self.grid = [[]]
         self.width = width
         self.height = height
         for i in range(height):
@@ -16,6 +13,7 @@ class Maze:
                 self.grid[i].append(Cell(0))
 
     def __init__(self, width: int, height: int, default_wall: int):
+        self.grid = [[]]
         self.width = width
         self.height = height
         for i in range(height):

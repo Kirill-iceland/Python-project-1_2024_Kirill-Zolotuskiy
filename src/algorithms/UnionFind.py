@@ -1,6 +1,6 @@
 class UnionFind:
-    data = []
     def __init__(self, size):
+        self.data = []
         for i in range(size):
             self.data.append(i)
 
