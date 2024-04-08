@@ -9,6 +9,7 @@ from BFS import BFS
 from AStar import AStar
 from Button import Button
 from Generate import Generate
+from Solve import Solve
 
 pygame.init()
 pygame.font.init()
@@ -39,6 +40,7 @@ solve.set_text_color((255, 255, 255))
 solve.set_color((150, 150, 150))
 
 generate_window = Generate()
+solve_window = Solve()
 
 running = True
 while running:
@@ -47,11 +49,12 @@ while running:
             running = generate_window.open(screen)
             screen.fill((0, 0, 0))
         if solve.draw(screen):
+            running = solve_window.open(screen)
+            screen.fill((0, 0, 0))
+        if solve.draw(screen):
             running = False
         if event.type == pygame.QUIT:
             running = False
     # maze.draw(screen, 20, 20, 960, 960)
     pygame.display.flip()
 pygame.quit()
-
-print(1)
