@@ -1,5 +1,3 @@
-# import sys
-# sys.path.append('../maze')
 from Maze import Maze
 from UnionFind import UnionFind
 import random

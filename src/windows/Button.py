@@ -1,14 +1,6 @@
 import pygame
 
-
 class Button:
-    color: tuple[int, int, int]
-    text_color: tuple[int, int, int]
-    text: str
-    rect: pygame.rect.Rect
-    clicked: bool
-    my_font: pygame.font.Font
-
     def __init__(self, pos_x: int, pos_y: int, size_x: int, size_y: int, font_size: int):
         self.rect = pygame.rect.Rect(pos_x, pos_y, size_x, size_y)
         self.clocked = True

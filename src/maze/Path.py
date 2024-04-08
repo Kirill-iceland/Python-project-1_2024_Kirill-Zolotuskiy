@@ -41,7 +41,3 @@ class Path:
                                  stroke + (cell_y * length), length - (2 * stroke), 2 * length - (2 * stroke)))
             last_x = cell_x
             last_y = cell_y
-            # pygame.draw.rect(screen, (50, 50, 255), (pos_x + stroke + (cell_x * length), pos_y +
-            #                  stroke + (cell_y * length), length - (2 * stroke), length - (2 * stroke)))
-            # pygame.draw.rect(screen, (150, 150, 150), (pos_x + stroke + (cell_x * length), pos_y +
-            #                  stroke + (cell_y * length), length - (2 * stroke), length - (2 * stroke)), int(stroke) // 2)

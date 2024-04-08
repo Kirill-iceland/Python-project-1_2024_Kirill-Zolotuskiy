@@ -8,7 +8,6 @@ from Path import Path
 from Button import Button
 
 class Generate:
-
     def __init__(self):
         self.width = 20
         self.height = 20

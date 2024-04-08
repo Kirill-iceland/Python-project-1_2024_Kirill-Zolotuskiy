@@ -1,15 +1,12 @@
 import pygame
 from SpanningTree import SpanningTree
 from DFS import DFS
-from AStar import AStar
-from BFS import BFS
 from Maze import Maze
 from Path import Path
 from Button import Button
 
 
 class Solve:
-
     def __init__(self):
         self.width = 20
         self.height = 20
