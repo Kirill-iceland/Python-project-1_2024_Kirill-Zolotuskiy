@@ -1,6 +1,6 @@
-from Cell import Cell
 import pygame
 
+from src.maze.Cell import Cell
 
 class Maze:
     def __init__(self, width: int, height: int):

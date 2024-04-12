@@ -1,11 +1,11 @@
-import pygame
 import sys
-sys.path.append('src/algorithms')
-sys.path.append('src/maze')
-sys.path.append('src/windows')
-from Button import Button
-from Generate import Generate
-from Solve import Solve
+import os
+
+import pygame
+
+from src.windows.Button import Button
+from src.windows.Generate import Generate
+from src.windows.Solve import Solve
 
 pygame.init()
 pygame.font.init()

@@ -1,7 +1,7 @@
-from Maze import Maze
-from UnionFind import UnionFind
 import random
 
+from src.maze.Maze import Maze
+from src.algorithms.UnionFind import UnionFind
 
 class SpanningTree:
     def get_index(x: int, y: int, width: int) -> int:

@@ -1,9 +1,10 @@
 import pygame
-from SpanningTree import SpanningTree
-from DFS import DFS
-from Maze import Maze
-from Path import Path
-from Button import Button
+
+from src.algorithms.SpanningTree import SpanningTree
+from src.algorithms.DFS import DFS
+from src.maze.Maze import Maze
+from src.maze.Path import Path
+from src.windows.Button import Button
 
 
 class Solve:

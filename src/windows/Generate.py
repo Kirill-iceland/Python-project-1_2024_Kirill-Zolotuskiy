@@ -1,11 +1,12 @@
 import pygame
-from SpanningTree import SpanningTree
-from DFS import DFS
-from AStar import AStar
-from BFS import BFS
-from Maze import Maze
-from Path import Path
-from Button import Button
+
+from src.algorithms.SpanningTree import SpanningTree
+from src.algorithms.DFS import DFS
+from src.algorithms.AStar import AStar
+from src.algorithms.BFS import BFS
+from src.maze.Maze import Maze
+from src.maze.Path import Path
+from src.windows.Button import Button
 
 class Generate:
     def __init__(self):
