@@ -7,8 +7,10 @@ class Maze:
         self.grid = [[]]
         self.width = width
         self.height = height
+
         for i in range(height):
             self.grid.append([])
+
             for j in range(width):
                 self.grid[i].append(Cell(0))
 
@@ -16,8 +18,10 @@ class Maze:
         self.grid = [[]]
         self.width = width
         self.height = height
+
         for i in range(height):
             self.grid.append([])
+
             for j in range(width):
                 self.grid[i].append(Cell(default_wall))
 
@@ -34,7 +38,9 @@ class Maze:
         pygame.draw.rect(screen, (100, 255, 100), ((length * (self.height - 1)) +
                          pos_x, (length * (self.width - 1)) + pos_y, length, length))
         stroke = max(length / 10, 1)
+        
         for i in range(self.height):
+
             for j in range(self.width):
                 if (self.grid[i][j].left_wall):
                     pygame.draw.rect(
@@ -54,8 +60,10 @@ class Maze:
 
     def get_edges(self) -> list[list[list[tuple[int, int]]]]:
         edges = [[[]]]
+
         for i in range(self.height):
             edges.append([[]])
+
             for j in range(self.width):
                 edges[i].append([])
                 if (j + 1 < self.width and not self.grid[i][j].right_wall):
@@ -66,4 +74,5 @@ class Maze:
                     edges[i][j].append((i + 1, j, 2))
                 if (i > 0 and not self.grid[i][j].top_wall):
                     edges[i][j].append((i - 1, j, 3))
+                    
         return edges

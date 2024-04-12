@@ -26,6 +26,7 @@ class Path:
         stroke = max(length / 3, 1)
         last_x = 0
         last_y = 0
+        
         for (cell_x, cell_y) in self.path:
             if (last_x < cell_x):
                 pygame.draw.rect(screen, (50, 50, 255), (pos_x + stroke + (last_x * length), pos_y +

@@ -32,6 +32,7 @@ class MazeCreator:
 
         running = True
         while running:
+
             for event in pygame.event.get():
                 if generate.draw(screen):
                     running = generate_window.open(screen)
@@ -43,6 +44,7 @@ class MazeCreator:
                     running = False
                 if event.type == pygame.QUIT:
                     running = False
+
             pygame.display.flip()
         pygame.quit()
 

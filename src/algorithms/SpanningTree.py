@@ -10,7 +10,9 @@ class SpanningTree:
     def generate(width: int, height: int) -> Maze:
         maze = Maze(width, height, 0b1111)
         edges = []
+
         for i in range(height):
+
             for j in range(width):
                 if (j + 1 < width):
                     edges.append((i, j, i, j + 1, 0))
@@ -25,6 +27,7 @@ class SpanningTree:
         union_find = UnionFind(width * height)
         number_of_connected = width * height - 1
         index = -1
+        
         while number_of_connected > 0:
             index += 1
             cell1 = SpanningTree.get_index(

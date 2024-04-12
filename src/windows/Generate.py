@@ -77,6 +77,7 @@ class Generate:
         screen.fill((200, 255, 255))
         running = True
         keep_open = True
+        
         while running:
             self.maze.draw(screen, 150, 120, 700, 700)
             pygame.draw.rect(screen, (150, 150, 150), self.rect_width)

@@ -8,6 +8,7 @@ class DFS:
             maze: Maze, visited: list[list[bool]]):
         visited[top_x][top_y] = True
         random.shuffle(edges[top_x][top_y])
+
         for (cell_x, cell_y, wall_type) in edges[top_x][top_y]:
             if visited[cell_x][cell_y]:
                 continue
@@ -30,9 +31,11 @@ class DFS:
         maze = Maze(width, height, 0b1111)
         edges = [[[]]]
         visited = [[]]
+
         for i in range(height):
             edges.append([[]])
             visited.append([])
+            
             for j in range(width):
                 visited[i].append(False)
                 edges[i].append([])
