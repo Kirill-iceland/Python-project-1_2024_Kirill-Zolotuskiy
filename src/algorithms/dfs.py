@@ -1,7 +1,7 @@
 import sys
 import random
 
-from src.maze.Maze import Maze
+from src.maze.maze import Maze
 
 class DFS:
     def DFS(top_x: int, top_y: int, edges: list[list[list[tuple[int, int, int]]]],

@@ -1,6 +1,6 @@
 import pygame
 
-from src.maze.Maze import Maze
+from src.maze.maze import Maze
 
 class Path:
     def __init__(self, maze: Maze):

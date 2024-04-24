@@ -2,9 +2,9 @@ import os
 
 import pygame
 
-from src.windows.Button import Button
-from src.windows.Generate import Generate
-from src.windows.Solve import Solve
+from src.windows.button import Button
+from src.windows.generate import Generate
+from src.windows.solve import Solve
 
 
 class MazeCreator:

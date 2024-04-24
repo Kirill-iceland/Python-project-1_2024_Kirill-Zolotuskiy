@@ -1,5 +1,5 @@
-from src.maze.Maze import Maze
-from src.maze.Path import Path
+from src.maze.maze import Maze
+from src.maze.path import Path
 
 class BFS:
     def solve(maze: Maze) -> Path:
