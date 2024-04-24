@@ -1,4 +1,3 @@
-import sys
 import os
 
 import pygame
@@ -14,7 +13,7 @@ class MazeCreator:
         pygame.font.init()
 
         screen = pygame.display.set_mode([1000, 1000])
-        icon = pygame.image.load('src/img/icon.png')
+        icon = pygame.image.load(os.path.join('src', 'img', 'icon.png'))
         pygame.display.set_icon(icon)
         pygame.display.set_caption('MazeCreator')
         generate = Button(100, 550, 800, 200, 50)
